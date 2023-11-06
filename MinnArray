@@ -8,7 +8,7 @@ public class min {
         int[] array = new int[length];
         System.out.println("Enter array");
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Enter number " + i);
+            System.out.println("Enter number " + i+1);
             array[i] = scanner.nextInt();
         }
         minn(array);
@@ -16,11 +16,13 @@ public class min {
 
     public static void minn(int[] array) {
         int min = array[0];
+        int index = 0;
         for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {
                 min = array[i];
+                index = i+1;
             }
         }
-        System.out.println("The minimum value is " + min);
+        System.out.println("The minimum value is " + min + " at the position of " + index);
     }
 }
